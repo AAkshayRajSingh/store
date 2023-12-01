@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import users from "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/userss.json"; // Import user data
 import loginImage from "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/patient.png"; // Import your image
+import videoBackground2 from '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/login.mp4';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -33,6 +34,9 @@ export default function Login() {
 
   return (
     <div className="Login">
+    <video autoPlay muted loop id="video-background" className="video-background">
+    <source src={videoBackground2} type="video/mp4" />
+  </video>
       <div className="login-header">
         <img src={loginImage} alt="Login" />
         <h2>Patient Login</h2>

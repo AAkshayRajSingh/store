@@ -4,6 +4,7 @@ import { CartContext } from "../CartContext";
 import CartProduct from './CartProduct';
 import cartIcon from '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/download (1).png'; // Import the cart image
 import logo from '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/symtocare.png';
+
 function NavbarComponent() {
     const cart = useContext(CartContext);
 
@@ -38,18 +39,17 @@ function NavbarComponent() {
 
     return (
         <>
-            <Navbar expand="sm">
-            <Navbar.Brand href="/">
-            <img src={logo} style={{ width: '150px', height: '100px' }} />
-        </Navbar.Brand>
-        
-                <Navbar.Toggle />
-                <Navbar.Collapse className="justify-content-end">
-                    <Button onClick={handleShow} style={cartButtonStyle}>
+             <Navbar expand="sm">
+                <Container>
+                    <Navbar.Brand href="/">
+                        <img src={logo} style={{ width: '150px', height: '100px' }} />
+                    </Navbar.Brand>
+                    <Button onClick={handleShow} style={cartButtonStyle} className="ml-auto">
                         <img src={cartIcon} alt="Cart" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                         Cart ({productsCount} Items)
                     </Button>
-                </Navbar.Collapse>
+                </Container>
+                <Navbar.Toggle />
             </Navbar>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

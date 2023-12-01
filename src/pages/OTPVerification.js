@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { Link, useNavigate } from "react-router-dom";
 import "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/pages/OPTVerification.css";
-import otpImage from "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/Screenshot_2023-10-30_at_11.42.07_PM-removebg-preview.png"; // Import your image
+import videoBackground4 from '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/otp.mp4';
 
 const LOCKOUT_DURATION = 30000; // Lockout duration in milliseconds (30 seconds)
 
@@ -58,7 +58,9 @@ export default function OTPVerification() {
 
   return (
     <div className="OTPVerification">
-      <img src={otpImage} alt="OTP" className="otp-image" style={{ maxWidth: "250px" }} /> {/* Set the max width */}
+    <video autoPlay muted loop id="video-background" className="video-background">
+    <source src={videoBackground4} type="video/mp4" />
+  </video>
       <Form onSubmit={handleSubmit}>
         <h2>OTP Verification</h2>
         <p>Please check your email for the OTP.</p>

@@ -4,10 +4,14 @@ import akshay from "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/a
 import Amina from "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/tick.png";
 import Ruhee from "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/tick.png";
 import Manish from "/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/tick.png";
+import videoBackground6 from '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/welcome1.mp4';
 
 export default function Creators() {
   return (
     <div className="container">
+    <video autoPlay muted loop id="video-background" className="video-background">
+    <source src={videoBackground6} type="video/mp4" />
+  </video>
       <h1
         style={{
           fontSize: "40px",
@@ -21,11 +25,7 @@ export default function Creators() {
       </h1>
       <div className="creator-info">
         <div className="creator">
-          <img
-            src={akshay}
-            alt="Akshay Raj Singh.A"
-            className="creator-image"
-          />
+        
           <h1>Akshay Raj Singh.A</h1>
           <h2>Machine Learning Engineer</h2>
           <p
@@ -41,11 +41,7 @@ export default function Creators() {
           </p>
         </div>
         <div className="creator">
-          <img
-            src={Amina}
-            alt="Amina Firdouse"
-            className="creator-image"
-          />
+       
           <h1>Amina Firdouse</h1>
           <h2>Information Retrieval Engineer</h2>
           <p
@@ -61,11 +57,7 @@ export default function Creators() {
           </p>
         </div>
         <div className="creator">
-          <img
-            src={Ruhee}
-            alt="Ruhee Afroz Syed"
-            className="creator-image"
-          />
+     
           <h1>Syed Ruhee Alfroz</h1>
           <h2>Data Collector</h2>
           <p
@@ -81,11 +73,7 @@ export default function Creators() {
           </p>
         </div>
         <div className="creator">
-          <img
-            src={Manish}
-            alt="Manish Cheruku"
-            className="creator-image"
-          />
+       
           <h1>Manish Cheruku</h1>
           <h2>UI Designer</h2>
           <p

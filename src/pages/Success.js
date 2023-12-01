@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Confetti from 'react-confetti';
 import img from '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/Order Confirmation.gif';
 import '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/pages/success.css';
+import videoBackground6 from '/Users/a.akshayrajsingh/Desktop/ecommerce/store/src/images/welcome1.mp4';
 
 function Success() {
   useEffect(() => {
@@ -17,6 +18,9 @@ function Success() {
   return (
     <div className="success-container">
       <div className="success-content">
+      <video autoPlay muted loop id="video-background" className="video-background">
+      <source src={videoBackground6} type="video/mp4" />
+    </video>
         <h1>Success!</h1>
         <h1>Medicines have been Purchased!</h1>
         <h1>We Wish you get well soon</h1>
